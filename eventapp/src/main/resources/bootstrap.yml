@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/rabbitmq
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+  application:
+    name: event-microservice
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8080
+
+server:
+  port: 8083
+
+appDescription: "Management events in environment by microservices"
+appVersion: "1.0.0"
